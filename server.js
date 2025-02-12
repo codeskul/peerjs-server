@@ -4,7 +4,7 @@ const https = require("https");
 const express = require("express");
 const app = express();
 
-const { ExpressPeerServer } = require("peer");
+// const { ExpressPeerServer } = require("peer");
 
 // use express static to deliver resources HTML, CSS, JS, etc)
 // from the public folder
@@ -19,11 +19,11 @@ const options = {
 const server = http.createServer(app);
 
 // create PeerJS server
-const peerServer = ExpressPeerServer(server, {
-  debug: true,
-});
+// const peerServer = ExpressPeerServer(server, {
+//   debug: true,
+// });
 
-app.use("/peerjs", peerServer);
+// app.use("/peerjs", peerServer);
 
 const io = require("socket.io")(server, {
   cors: {

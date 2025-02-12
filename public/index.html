@@ -99,13 +99,14 @@
       const localVideo = document.getElementById("localVideo");
       const remoteVideo = document.getElementById("remoteVideo");
       // Initialize Peer object
-      const peer = new Peer( {
-        // host: "localhost",
-        host: "/",
-        port:4000,
-        path: "/peerjs",
-        debug: 3,
-      });
+      // const peer = new Peer( {
+      //   // host: "localhost",
+      //   host: "/",
+      //   port:4000,
+      //   path: "/peerjs",
+      //   debug: 3,
+      // });
+      const peer = new Peer();
 
       // Initialize socket.io object
       const socket = io();
